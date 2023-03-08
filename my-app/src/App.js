@@ -1,5 +1,6 @@
 import "./App.css";
 import Form from "./Form";
+import List from "./List";
 import { useState } from "react";
 import { uid } from "uid";
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Form onAddActivity={handleAddActivity} />
+      <List activity={activities} />
     </div>
   );
 }
