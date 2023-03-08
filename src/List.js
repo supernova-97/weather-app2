@@ -1,8 +1,10 @@
-function List({ activity }) {
+function List({ activities }) {
   return (
     <>
       <ul>
-        <li>{activity}</li>
+        {activities.map((activity) => (
+          <li key={activity.id}>{activity.name}</li>
+        ))}
       </ul>
     </>
   );

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { uid } from "uid";
 
 function App() {
-  const [activities, setActivities] = useState("");
+  const [activities, setActivities] = useState([]);
 
   function handleAddActivity(newActivity) {
     console.log("Act:", newActivity);
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Form onAddActivity={handleAddActivity} />
-      <List activity={activities} />
+      <List activities={activities} />
     </div>
   );
 }
